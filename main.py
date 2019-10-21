@@ -1,27 +1,11 @@
 import requests
 import sys
 from route import getroute
+from view import getUri
 
 def main():
 
-    URL = "http://svc.metrotransit.org/NexTrip/17953?format=json"
-
-    fun = sys.argv[0]
-    print(fun)
-    routeTest = "4 - New Brighton - Johnson St - Bryant Av - Southtown"
-    directionTest = "north"
-    stopTest = "Hennepin Ave and 36th St "
-
-    getroute(routeTest)
-
-    data = requests.get(URL)
-
-
-
-
-
-
-
+    getUri()
 
 
 if __name__ == '__main__':
