@@ -5,13 +5,13 @@ def getDirection(routeID, direction):
 
     data = requests.get(URL).json()
     print(direction)
-    if direction.lower == "south" or "southbound":
+    if direction == "south":
         print("its south")
         for item in data:
             if item['Text'] == "SOUTHBOUND":
                 return item['Value']
 
-    if direction.lower == "north" or "northbound":
+    if direction == "north":
         print("its north")
         for item in data:
             if item['Text'] == "NORTHBOUND":
