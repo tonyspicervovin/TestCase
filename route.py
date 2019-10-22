@@ -1,9 +1,9 @@
 import requests
 
 
-def getroute(route):
+def get_route(route):
 
-    #Url to see all routes
+    # Url to see all routes
     URL = "http://svc.metrotransit.org/NexTrip/routes?format=json"
 
     #making call to api

@@ -1,6 +1,7 @@
 import requests
 
-def getDirection(routeID, direction):
+def get_direction(routeID, direction):
+
     URL = f"http://svc.metrotransit.org/NexTrip/directions/{routeID}?format=json"
 
     data = requests.get(URL).json()

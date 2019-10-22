@@ -1,28 +1,30 @@
-from route import getroute
-from direction import getDirection
-from stop import getStop
-from nextBus import getNextBus
+from route import get_route
+from direction import get_direction
+from stop import get_stop
+from nextBus import get_next_bus
 import sys
 
-def getUri():
-    routeTest = "METRO Blue Line/."
-    directionTest = "north"
-    stopTest = "Target Field Station Platform 1"
 
-    route_id = getroute(routeTest)
+def get_uri():
+
+    route_test = "METRO Blue Line"
+    direction_test = "north"
+    stop_test = "Target Field Station Platform 1"
+
+    route_id = get_route(route_test)
     if route_id is None:
-        sys.exit(routeTest+" is not a valid route")
+        sys.exit(route_test+" is not a valid route")
     print(route_id)
 
-    direction_id = getDirection(route_id, directionTest)
+    direction_id = get_direction(route_id, direction_test)
     if direction_id is None:
-        sys.exit(routeTest + " does not run " + directionTest)
+        sys.exit(route_test + " does not run " + direction_test)
     print(direction_id)
 
-    stop_id = getStop(route_id, direction_id, stopTest)
+    stop_id = get_stop(route_id, direction_id, stop_test)
     if stop_id is None:
-        sys.exit(stopTest + " is not along " + routeTest + " going " + directionTest)
+        sys.exit(stop_test + " is not along " + route_test + " going " + direction_test)
 
-    getNextBus(route_id, direction_id, stop_id)
+    get_next_bus(route_id, direction_id, stop_id)
 
 

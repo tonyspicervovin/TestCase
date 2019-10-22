@@ -1,11 +1,12 @@
-import requests
+
 import sys
-from route import getroute
-from view import getUri
+from view import get_uri
+
 
 def main():
 
-    getUri()
+    program_name = sys.argv[0]
+    get_uri()
 
 
 if __name__ == '__main__':

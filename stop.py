@@ -1,7 +1,8 @@
 import requests
 import sys
 
-def getStop(route_id, direction_id, stop):
+
+def get_stop(route_id, direction_id, stop):
 
     URL = f"https://svc.metrotransit.org/NexTrip/stops/{route_id}/{direction_id}?format=json"
 
