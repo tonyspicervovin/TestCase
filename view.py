@@ -2,6 +2,7 @@ from route import get_route
 from direction import get_direction
 from stop import get_stop
 from nextBus import get_next_bus
+from datetime import datetime
 
 
 
@@ -31,7 +32,10 @@ def get_uri(bus_route, stop_name, bus_direction):
         raise ValueError(stop_name + " is not along " + bus_route + " going " + bus_direction)
 
         # if no stop is found error message is printed and code exits
-    minutes = get_next_bus(route_id, direction_id, stop_id)
+    now = datetime.now()
+    print(now)
+    # current time
+    minutes = get_next_bus(route_id, direction_id, stop_id, now)
     # finally if we have a proper route direction and stop id we call
     # method in nextBus.py with the arguments
 
