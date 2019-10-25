@@ -1,7 +1,10 @@
 import unittest
 from unittest import TestCase
-import view
+from datetime import datetime
+from requests import patch
 
+import view
+from nextBus import process_time_to_minutes
 
 class TestNextBus(TestCase):
 
@@ -64,6 +67,23 @@ class TestNextBus(TestCase):
 
         with self.assertRaises(ValueError):
             view.get_uri("16 - University Av - Midway", "University Ave and Laxington Pkwy", "east")
+
+    def test_time_diff(self):
+        now = "2019-10-24 22:13:53.338987"
+        date_time_obj = datetime.strptime(now, '%Y-%m-%d %H:%M:%S.%f')
+        example_time_code = "/Date(1571973780000-0500)/"
+        time_response = process_time_to_minutes(example_time_code, date_time_obj)
+        correct_response = 9
+        self.assertEqual(correct_response, time_response)
+
+
+        now_2 = "2019-10-25 10:07:05.864609"
+        date_time_obj_2 = datetime.strptime(now_2, '%Y-%m-%d %H:%M:%S.%f')
+        example_time_code_2 = "/Date(1572016080000-0500)/"
+        time_response_2 = process_time_to_minutes(example_time_code_2, date_time_obj_2)
+        correct_response_2 = 0
+        self.assertEqual(correct_response_2, time_response_2)
+
 
 
 if __name__ == '__main__':
