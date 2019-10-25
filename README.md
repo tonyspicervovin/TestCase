@@ -33,7 +33,7 @@ and an example time response from the api is passed in, it confirms it produces 
 Here is a link to the metro transit api help page
 https://svc.metrotransit.org/NexTrip/help
 
-##Author
+## Author
 Anthony Covin
 https://github.com/tonyspicervovin
 
