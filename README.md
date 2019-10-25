@@ -1,6 +1,6 @@
 # Project Title
 This program works with the metro transit api system and provides data about the next bus for a particular route stop and direction
-tha
+
 ## Getting Started
 Clone this project on to your own machine
 From the root directory, from the command line run 
