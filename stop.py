@@ -13,7 +13,6 @@ def get_stop(route_id, direction_id, stop):
         if stop == item["Text"].strip():
             #comparing stop arg string with stop text, removing whitespace
             route_code = item["Value"]
-            print(route_code)
             if route_code is None:
                 print("Invalid Stop")
                 quit()

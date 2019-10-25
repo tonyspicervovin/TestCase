@@ -6,7 +6,6 @@ from datetime import datetime, timedelta
 def get_next_bus(route_id, direction_id, stop_id, now):
 
     URL = f"https://svc.metrotransit.org/NexTrip/{route_id}/{direction_id}/{stop_id}?format=json"
-    print(URL)
     data = requests.get(URL).json()
 
     # pulling bus information for route at stop going direction
@@ -16,7 +15,6 @@ def get_next_bus(route_id, direction_id, stop_id, now):
         print("No more buses leaving today")
         quit()
 
-    print(arrival_time)
     # accessing departure time
     date_dif_in_minutes = process_time_to_minutes(arrival_time, now)
     return date_dif_in_minutes
@@ -28,8 +26,6 @@ def process_time_to_minutes(arrival_time, now):
     time_code = int(res[0] / 1000)
     # extracting 13 digit unix timestamp and changing it to seconds
     thing = datetime.utcfromtimestamp(time_code) - timedelta(hours=5)
-    print(arrival_time + "it me")
-    print(now)
     # subtracting 5 hours to get current local time
     date_dif = (thing - now).seconds
     # difference between dates in seconds

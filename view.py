@@ -33,7 +33,6 @@ def get_uri(bus_route, stop_name, bus_direction):
 
         # if no stop is found error message is printed and code exits
     now = datetime.now()
-    print(now)
     # current time
     minutes = get_next_bus(route_id, direction_id, stop_id, now)
     # finally if we have a proper route direction and stop id we call
