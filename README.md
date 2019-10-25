@@ -1,4 +1,4 @@
-# Project Title
+# Project Description
 This program works with the metro transit api system and provides data about the next bus for a particular route stop and direction
 
 ## Getting Started
