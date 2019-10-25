@@ -17,10 +17,10 @@ Than to install the requirements run
 pip install -r requirements.txt
 
 Now the program is ready to be ran,
-it is designed to be run from the command prompt given 3 arguments
-For example 
+it is designed to be ran from the command prompt given 3 arguments
+for example 
 python main.py "6 - U of M - Hennipen - Xerxes - France -Southdale" "Southdale Transit Center" "south"
-Will return something like "5 minutes until next bus/rail"
+will return something like "5 minutes until next bus/rail"
 
 ## Testing
 To run the tests run
