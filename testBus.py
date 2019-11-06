@@ -6,6 +6,7 @@ from requests import patch
 import view
 from nextBus import process_time_to_minutes
 
+
 class TestNextBus(TestCase):
 
     def test_get_route(self):

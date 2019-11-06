@@ -11,7 +11,7 @@ def get_stop(route_id, direction_id, stop):
     for item in data:
 
         if stop.strip() == item["Text"].strip():
-            #comparing stop arg string with stop text, removing whitespace
+            # comparing stop arg string with stop text, removing whitespace
             route_code = item["Value"]
             if route_code is None:
                 print("Invalid Stop")

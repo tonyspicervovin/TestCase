@@ -5,12 +5,7 @@ from nextBus import get_next_bus
 from datetime import datetime
 
 
-
 def get_uri(bus_route, stop_name, bus_direction):
-
-    route_test = "METRO Blue Line"
-    direction_test = "north"
-    stop_test = "Target Field Station Platform 1"
 
     route_id = get_route(bus_route)
     # passing route to method in route.py
